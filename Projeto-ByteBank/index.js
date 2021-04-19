@@ -1,6 +1,6 @@
 //const -> não se altera
 //class por convenção sempre com letra maiúscula
-//private fields - se a variável começa com # teóricamente é privada, node a partir da v12 já inplementou isso
+//private fields - se a variável começa com # teóricamente é privada, node a partir da v12 já implementou isso
 //nesse código o #saldo só pode ser acessado dentro da classe
 
 class Cliente {
@@ -52,9 +52,6 @@ console.log(cliente1);
 contaCorrenteKarina.depositar(100);
 contaCorrenteKarina.sacar(50);
 contaCorrenteKarina.depositar(150);
-
-
-
 
 
 
