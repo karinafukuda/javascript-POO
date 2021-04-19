@@ -1,0 +1,20 @@
+{
+  "name": "bytebank",
+  "version": "1.0.0",
+  "description": "Alura ByteBank",
+  "main": "Projeto-ByteBank/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karinafukuda/javascript-POO.git"
+  },
+  "author": "Karina",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/karinafukuda/javascript-POO/issues"
+  },
+  "homepage": "https://github.com/karinafukuda/javascript-POO#readme"
+}
