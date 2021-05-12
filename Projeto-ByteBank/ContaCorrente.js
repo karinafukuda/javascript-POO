@@ -19,6 +19,7 @@ export class ContaCorrente {
         console.log(this._saldo);
     }
 
+    //method     obj , obj    =>    instancia da Contacorrente
     transferir(valor, conta){
         const valorSacado = this.sacar(valor);
         conta.depositar(valorSacado);
