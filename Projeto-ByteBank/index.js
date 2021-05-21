@@ -6,39 +6,38 @@
 //Consenso da comunidade é de que: se a variável que começa com _ é privada e deve ser acessada somente pela classe
 //Classes por arquivo devem começar com letra maiúscula
 
-// let valorSacado = 200;
-// if (contaCorrenteKarina.saldo >= valorSacado){
-//     contaCorrenteKarina.saldo -= valorSacado;
-// }
-
 import {Cliente} from "./Cliente.js"
 import {ContaCorrente} from "./ContaCorrente.js"
 
+// const cliente1 = new Cliente ();
+// //instância
+// cliente1.nome = "Karina Fukuda";
+// cliente1.cpf = 12312312312;
 
-const cliente1 = new Cliente ();
-//instância
-cliente1.nome = "Karina Fukuda";
-cliente1.cpf = 12312312312;
+//com constructor
+const cliente1 = new Cliente ("Karina Fukuda" , 12312312312);
+const cliente2 = new Cliente ("Gabriel Rocha", 28286895987);
+// let numeroDeContas = 0;
+// const contaCorrenteKarina = new ContaCorrente();
+// contaCorrenteKarina.agencia = 1001;
+// contaCorrenteKarina.cliente = cliente1;
 
-const cliente2 = new Cliente ();
-//instância
-cliente2.nome = "Gabriel";
-cliente2.cpf = 22322322322;
+//com constructor
+const contaCorrenteKarina = new ContaCorrente(1001 , cliente1);
+//numeroDeContas++;
 
-
-const contaCorrenteKarina = new ContaCorrente();
-contaCorrenteKarina.agencia = 1001;
-contaCorrenteKarina.cliente = cliente1;
 contaCorrenteKarina.depositar(500);
 
-const conta2 = new ContaCorrente ();
-conta2.cliente = cliente2;
-conta2.agencia = 102;
+const conta2 = new ContaCorrente(102, cliente2);
+//numeroDeContas++;
+new ContaCorrente(102, cliente2);
+new ContaCorrente(102, cliente2);
 
-contaCorrenteKarina.transferir(200, conta2);
+let valor = 200;
+contaCorrenteKarina.transferir(valor, conta2);
 
-console.log(contaCorrenteKarina);
-console.log(conta2);
+console.log(ContaCorrente.numeroDeContas);
+
 
 // console.log(cliente1);
 // contaCorrenteKarina.depositar(100);
@@ -48,8 +47,6 @@ console.log(conta2);
 // const valorSacado = contaCorrenteKarina.sacar(50);
 // console.log(valorSacado);
 // console.log(contaCorrenteKarina);
-
-
 
 
 // node ./Projeto-Bytebank/index.js
