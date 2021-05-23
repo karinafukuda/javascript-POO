@@ -8,6 +8,8 @@
 
 import {Cliente} from "./Cliente.js"
 import {ContaCorrente} from "./ContaCorrente.js"
+import { ContaPoupanca } from "./ContaPoupanca.js";
+import { ContaSalario } from "./ContaSalario.js";
 
 // const cliente1 = new Cliente ();
 // //instância
@@ -27,26 +29,29 @@ const contaCorrenteKarina = new ContaCorrente(1001 , cliente1);
 //numeroDeContas++;
 
 contaCorrenteKarina.depositar(500);
+contaCorrenteKarina.sacar(100);
 
 const conta2 = new ContaCorrente(102, cliente2);
 //numeroDeContas++;
 new ContaCorrente(102, cliente2);
 new ContaCorrente(102, cliente2);
 
-let valor = 200;
-contaCorrenteKarina.transferir(valor, conta2);
+const contaPoupanca = new ContaPoupanca(50, cliente1, 1001);
+contaPoupanca.sacar(10);
 
-console.log(ContaCorrente.numeroDeContas);
-
+const contaSalario = new ContaSalario(cliente1);
+contaSalario.depositar(100);
+contaSalario.sacar(10);
+console.log(contaSalario);
+// console.log(contaPoupanca);
+// console.log(contaCorrenteKarina);
 
 // console.log(cliente1);
 // contaCorrenteKarina.depositar(100);
 // contaCorrenteKarina.sacar(50);
 // contaCorrenteKarina.depositar(150);
-
 // const valorSacado = contaCorrenteKarina.sacar(50);
 // console.log(valorSacado);
 // console.log(contaCorrenteKarina);
-
 
 // node ./Projeto-Bytebank/index.js
