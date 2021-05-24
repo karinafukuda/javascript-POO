@@ -1,4 +1,4 @@
-import { Conta } from "./Conta.js";
+import { Conta } from "./Conta/Conta.js";
 
 export class ContaSalario extends Conta {
   constructor(cliente){

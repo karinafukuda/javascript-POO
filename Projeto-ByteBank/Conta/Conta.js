@@ -8,6 +8,8 @@ export class Conta{
     this._cliente = cliente; 
     this.agencia = agencia;
   }
+
+  //set , get ---assessores
    set cliente(novoValor){
     if(novoValor instanceof Cliente){
          this._cliente = novoValor;
