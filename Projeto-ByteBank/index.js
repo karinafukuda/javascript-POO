@@ -20,13 +20,16 @@ import { SistemaAutenticacao } from "./SistemaAutenticacao.js"
 // Conceito Polimorfismo ~ desde que as classes herdem um elemento em comum
 const diretor = new Diretor ("Karina" , 20000 , 12345612300);
 diretor.cadastrarSenha("123456789");
-const diretor = new Gerente ("Carlos" , 10000 , 98765432100);
-diretor.cadastrarSenha("123");
+const gerente = new Gerente ("Carlos" , 10000 , 98765432100);
+gerente.cadastrarSenha("123");
+const cliente = new Cliente ( "Lais", 44444444444 , "111" );
 
-// SistemaAutenticacao.login( diretor, "123456");
+const gerenteEstaLogado = SistemaAutenticacao.login(gerente, "123");
+const diretorEstaLogado = SistemaAutenticacao.login(diretor, "123456789");
+const clienteEstaLogado = SistemaAutenticacao.login(cliente, "111");
 
-const estaLogado = SistemaAutenticacao.login(diretor, "123456789");
 
-console.log(estaLogado);
+console.log(gerenteEstaLogado, diretorEstaLogado, clienteEstaLogado );
+
 
 // node ./Projeto-Bytebank/index.js
